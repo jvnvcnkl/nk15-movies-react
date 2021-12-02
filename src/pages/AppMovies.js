@@ -5,6 +5,7 @@ import {
 
 import { selectMovies } from "../store/movies/selectors";
 import { getMovies } from "../store/movies/slice";
+import MovieRow from '../components/MovieRow'
 export default function AppMovies() {
 
     const dispatch = useDispatch();
@@ -22,9 +23,10 @@ export default function AppMovies() {
             <h1>Movies</h1>
             <ul>
                 {movies && movies.data.map(movie => (
-                    <li key={movie.id}>{movie.title}</li>
+                    <li key={movie.id}><MovieRow prop={movie} /> </li>
+
                 ))}
             </ul>
-        </div>
+        </div >
     )
 }
