@@ -7,10 +7,12 @@ import {
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from "./store"
+import MovieSearch from './components/MovieSearch';
 
 function App() {
   return (
     <Provider store={store}>
+      <MovieSearch />
       <Router>
         <Link to='/movies'> Movies </Link>
 

@@ -4,10 +4,9 @@ import movieService from '../../services/MovieService';
 
 
 function* getMoviesHandler({ payload }) {
-    console.log("get movies handler")
     try {
-        const data = yield call(movieService.getAll)
-        console.log(data)
+
+        const data = yield call(movieService.getAll, payload?.title)
         yield put(setMovies(data))
     } catch (error) {
         console.log(error)

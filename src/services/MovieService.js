@@ -6,11 +6,12 @@ class MovieService {
         })
     }
 
-    getAll = async () => {
-        const { data } = await this.client.get('/movies');
-        console.log(data)
-        return data
+    getAll = async (title = '') => {
+        const query = title ? `?title=${title}` : ''
+        const { data } = await this.client.get(`/movies${query}`)
+        return data;
     }
+
 
 }
 
