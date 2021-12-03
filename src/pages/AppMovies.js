@@ -12,7 +12,7 @@ export default function AppMovies() {
 
 
     const movies = useSelector(selectMovies)
-
+    console.log(movies)
 
     useEffect(() => {
         dispatch(getMovies());
@@ -22,10 +22,10 @@ export default function AppMovies() {
         <div>
             <h1>Movies</h1>
             <ul>
-                {movies && movies.data.map(movie => (
+                {movies.data.length ? movies.data.map(movie => (
                     <li key={movie.id}><MovieRow prop={movie} /> </li>
 
-                ))}
+                )) : <p>No movies to show </p>}
             </ul>
         </div >
     )

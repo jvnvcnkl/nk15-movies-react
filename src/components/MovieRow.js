@@ -16,16 +16,3 @@ export default function MovieRow({ prop }) {
         </div >
     )
 }
-// director: "Mrs. Fabiola Frami Sr."
-
-// duration: 222
-
-// genre: "sci-fi"
-
-// id: 9
-
-// image_url: "https://images-na.ssl-images-amazon.com/images/I/51wILNNX2VL._AC_SY445_.jpg"
-
-// release_date: "1985-05-26"
-
-// title: "enim quia iste harum quam"
